@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const config = require('./service.json');
 
 mongoose.connect(config.MONGODB_SERVER_LOCAL, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true
+    // useNewUrlParser: true, 
+    // useUnifiedTopology: true
 })
   .then(()=> console.log("Connected to mongoDB!"))
   .catch(err => console.log("MongoDB Connection Failed!", err.message))

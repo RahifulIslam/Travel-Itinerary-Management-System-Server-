@@ -52,9 +52,9 @@ userSchema.methods.generateJWT = function () {
 
 const validateUser = user => {
     const schema = Joi.object({
-        name: Joi.string().min(3).max(100).required(),
-        email: Joi.string().min(5).max(255).required(),
-        password: Joi.string().min(3).max(100).required(),
+        name: Joi.string().min(3).max(100),
+        email: Joi.string().min(5).max(255),
+        password: Joi.string().min(3).max(100),
     });
 
     return schema.validate(user);
