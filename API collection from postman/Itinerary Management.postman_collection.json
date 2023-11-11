@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "b32f76f4-fdd1-4777-8fe3-5eb45db43e81",
+		"name": "Itinerary Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25210031",
+		"_collection_link": "https://bold-zodiac-460991.postman.co/workspace/Travel-itinerary-management-sys~96871156-7a75-4a3d-9b64-bceefb1af5b7/collection/25210031-b32f76f4-fdd1-4777-8fe3-5eb45db43e81?action=share&source=collection_link&creator=25210031"
+	},
+	"item": [
+		{
+			"name": "Create Itinerary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nafakum\",\r\n    \"dates\": \"2023-11-15\",\r\n    \"destinations\": \"Jaflong\",\r\n    \"activities\": \"Visiteing\",\r\n    \"transportation_details\": \"Sylet Express\",\r\n    \"accommodation_details\": \"Hotel nokshikatha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/itinerary/create-itinerary",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"itinerary",
+						"create-itinerary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Itinerary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kuakata\",\r\n    \"dates\": \"2023-11-20\",\r\n    \"destinations\": \"Barisal\",\r\n    \"activities\": \"Visiteing sea beach\",\r\n    \"transportation_details\": \"Ship\",\r\n    \"accommodation_details\": \"Hotel kuakata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/itinerary/update-itinerary/654e5c6a3b47d0a8868a40ed",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"itinerary",
+						"update-itinerary",
+						"654e5c6a3b47d0a8868a40ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Itinerary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/itinerary/delete-itinerary/654e5c6a3b47d0a8868a40ed",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"itinerary",
+						"delete-itinerary",
+						"654e5c6a3b47d0a8868a40ed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Itinerary by user Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/itinerary/search-itinerary-userId/654d3bd7806fb772aebcb356",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"itinerary",
+						"search-itinerary-userId",
+						"654d3bd7806fb772aebcb356"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "01db9953-55db-4dd5-a6cb-fb4016bf6982",
+		"name": "Authentication and authorization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25210031",
+		"_collection_link": "https://bold-zodiac-460991.postman.co/workspace/Travel-itinerary-management-sys~96871156-7a75-4a3d-9b64-bceefb1af5b7/collection/25210031-01db9953-55db-4dd5-a6cb-fb4016bf6982?action=share&source=collection_link&creator=25210031"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rahiful Islam\",\r\n    \"email\": \"rahifulislam@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/user/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rahifulislam@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/user/sign-in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
